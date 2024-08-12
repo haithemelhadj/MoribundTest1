@@ -9,6 +9,7 @@ public class Inputs : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D playerRb;
     public CapsuleCollider2D capsuleCollider;
+    public Animator playerAnimator;
     public float playerHeight;
     public float playerWidth;
 
@@ -28,6 +29,7 @@ public class Inputs : MonoBehaviour
         //get components
         playerRb = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        playerAnimator = GetComponent<Animator>();
         //get values
         playerWidth = capsuleCollider.size.x;
         playerHeight = capsuleCollider.size.y;
@@ -38,7 +40,8 @@ public class Inputs : MonoBehaviour
     private void Update()
     {
         HeadCheck();
-
+        //set animator Y velocity
+        playerAnimator.SetFloat("Yvelocity", playerRb.velocity.y);
         if (!wallSlideScript.isLedgeBumping)
         {
             GroundCheck();
@@ -54,6 +57,7 @@ public class Inputs : MonoBehaviour
     public void GetHInputs()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        playerAnimator.SetFloat("Hvelocity", Mathf.Abs(horizontalInput));
     }
 
     public void GetVInputs()
@@ -103,6 +107,7 @@ public class Inputs : MonoBehaviour
         {
             isGrounded = false;
         }
+        playerAnimator.SetBool("isGrounded", isGrounded);
     }
 
     //head bump

@@ -71,6 +71,8 @@ public class JumpScript : MonoBehaviour
             {
                 jumpTimeCounter = jumpTime;
                 isJumping = true;
+                //set jumping animation
+                inputsScript.playerAnimator.SetBool("isJumping", isJumping);
             }
 
             if (isJumping)
@@ -96,8 +98,10 @@ public class JumpScript : MonoBehaviour
                 {
                     isWallJumping = false;
                     isJumping = false;
+                    //set jumping animation
+                    inputsScript.playerAnimator.SetBool("isJumping", isJumping);
                     jumpInputConfirmed = false;
-                }
+                }                
             }
         }
     }
@@ -119,6 +123,8 @@ public class JumpScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
+            //set jumping animation
+            inputsScript.playerAnimator.SetBool("isJumping", isJumping);
             isWallJumping = false;
         }
     }

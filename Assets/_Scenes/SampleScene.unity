@@ -3090,16 +3090,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560268768}
+  - component: {fileID: 1560268772}
   - component: {fileID: 1560268767}
   - component: {fileID: 1560268766}
   - component: {fileID: 1560268765}
   - component: {fileID: 1560268763}
   - component: {fileID: 1560268761}
   - component: {fileID: 1560268771}
-  - component: {fileID: 1560268762}
   - component: {fileID: 1560268770}
   - component: {fileID: 1560268764}
-  - component: {fileID: 1560268769}
   m_Layer: 0
   m_Name: PlayerV2
   m_TagString: Untagged
@@ -3130,39 +3129,6 @@ MonoBehaviour:
   currentSpeed: 0
   isFacingRight: 0
   maxHSpeed: 7
---- !u!114 &1560268762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560268760}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ada709d0c6a14e47a792bb8c97049a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputsScript: {fileID: 0}
-  wallSlideScript: {fileID: 0}
-  ActionsScript: {fileID: 0}
-  movementscript: {fileID: 0}
-  jumpForce: 15
-  jumpConditions: 0
-  isWallJumping: 0
-  wallJumpingDirection: 0
-  wallJumpingTime: 0.2
-  wallJumpingCounter: 0
-  canMoveAfterWallJumpDuration: 0.2
-  isNotMoving: 0
-  wallJumpingDuration: 0.4
-  wallJumpingPower: {x: 5, y: 14}
-  jumpTimeCounter: 0
-  jumpTime: 0.2
-  isJumping: 0
-  LastGrounded: 0
-  cyoteTime: 0.1
-  canJump: 0
-  maxFallSpeed: 15
 --- !u!114 &1560268763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,6 +3145,7 @@ MonoBehaviour:
   wallSlideScript: {fileID: 0}
   playerRb: {fileID: 0}
   capsuleCollider: {fileID: 0}
+  playerAnimator: {fileID: 0}
   playerHeight: 0
   playerWidth: 0
   horizontalInput: 0
@@ -3343,22 +3310,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1560268769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560268760}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7488ba5ba25834ab8dda9016bb8b3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputsScript: {fileID: 0}
-  ray1Position: {fileID: 0}
-  ray2Position: {fileID: 0}
-  bumpForce: 0
 --- !u!114 &1560268770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,6 +3324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputsScript: {fileID: 1560268763}
   jumpingScript: {fileID: 0}
+  actionsScript: {fileID: 0}
   whatIsWall:
     serializedVersion: 2
     m_Bits: 192
@@ -3416,6 +3368,27 @@ MonoBehaviour:
   cyoteTime: 0.1
   canJump: 0
   maxFallSpeed: 15
+--- !u!95 &1560268772
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560268760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 140d5ee1c5d3cf9438a1ae148b887997, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1595144228
 GameObject:
   m_ObjectHideFlags: 0

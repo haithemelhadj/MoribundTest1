@@ -33,12 +33,13 @@ public class Actions : MonoBehaviour
     {
         if (inputsScript.dashInput && canDash)
         {
-            StartCoroutine(Dash());
+            StartCoroutine(Dash());            
         }
-        if(wallSlideScript.isWallSliding || inputsScript.isGrounded)
+        if(wallSlideScript.isWallSliding)
         {
             StopCoroutine(Dash());
             isDashing = false;
+            inputsScript.playerAnimator.SetBool("Dashing", isDashing);
         }
         if (!isDashing && (inputsScript.isGrounded || wallSlideScript.isWallSliding)) 
         {
@@ -51,6 +52,7 @@ public class Actions : MonoBehaviour
         //set vars
         canDash = false;
         isDashing = true;
+        inputsScript.playerAnimator.SetBool("Dashing", isDashing);
         //save gravity
         float originalGravity = inputsScript.playerRb.gravityScale;
         inputsScript.playerRb.gravityScale = 0f;
@@ -60,6 +62,8 @@ public class Actions : MonoBehaviour
         inputsScript.playerRb.drag = drag;
         //stop jumping
         jumpScript.isJumping = false;
+        //set jumping animation
+        inputsScript.playerAnimator.SetBool("isJumping", jumpScript.isJumping);
         //null velocity
         inputsScript.playerRb.velocity = Vector2.zero;
         //dash 
@@ -72,6 +76,7 @@ public class Actions : MonoBehaviour
         inputsScript.playerRb.gravityScale = originalGravity;
         inputsScript.playerRb.drag = originalDrag;
         isDashing = false;
+        inputsScript.playerAnimator.SetBool("Dashing", isDashing);
         yield return new WaitForSeconds(dashTime);
 
     }

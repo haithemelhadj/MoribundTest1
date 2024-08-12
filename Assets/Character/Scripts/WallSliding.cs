@@ -52,18 +52,21 @@ public class WallSliding : MonoBehaviour
         if(inputsScript.isGrounded || inputsScript.playerRb.velocity.y > 0)
         {
             isWallSliding = false;
+            inputsScript.playerAnimator.SetBool("isWallSliding", isWallSliding);
             return;
         }
 
         if (WallDetectionUpper() || WallDetectionMiddle() || WallDetectionLower()) 
         {
             isWallSliding = true;
+            inputsScript.playerAnimator.SetBool("isWallSliding", isWallSliding);
             //StopCoroutine(actionsScript.Dash());
             inputsScript.playerRb.velocity = new Vector2(inputsScript.playerRb.velocity.x, -wallSlidingSpeed);            
         }   
         else
         {
             isWallSliding = false;
+            inputsScript.playerAnimator.SetBool("isWallSliding", isWallSliding);
         }
     }
 
