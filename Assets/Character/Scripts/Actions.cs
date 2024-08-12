@@ -35,7 +35,12 @@ public class Actions : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        if (inputsScript.isGrounded && !isDashing )//|| wallSlideScript.isWallSliding)
+        if(wallSlideScript.isWallSliding || inputsScript.isGrounded)
+        {
+            StopCoroutine(Dash());
+            isDashing = false;
+        }
+        if (!isDashing && (inputsScript.isGrounded || wallSlideScript.isWallSliding)) 
         {
             canDash = true;
         }

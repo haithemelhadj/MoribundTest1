@@ -3376,6 +3376,8 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 192
+  isWallSliding: 0
+  wallSlidingSpeed: 0
   bumpForce: 1.5
   isLedgeBumping: 0
   bumpTime: 0.1
@@ -3397,8 +3399,13 @@ MonoBehaviour:
   movementscript: {fileID: 0}
   jumpForce: 15
   jumpConditions: 0
-  jumpBool: 0
+  jumpInputConfirmed: 0
   jumpReset: 0
+  wallJumpDuration: 0.8
+  wallJumpPressTime: 0
+  isWallJumping: 0
+  jumpDirection: {x: 0, y: 0}
+  wallJumpDirection: {x: 8, y: 16}
   jumpTimeCounter: 0
   jumpTime: 0.15
   isJumping: 0

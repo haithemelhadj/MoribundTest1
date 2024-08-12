@@ -1,20 +1,23 @@
+using System.Collections;
 using UnityEngine;
 
 public class WallSliding : MonoBehaviour
 {
     public Inputs inputsScript;
     public JumpScript jumpingScript;
+    public Actions actionsScript;
 
     private void Awake()
     {
         //get scripts
         inputsScript = GetComponent<Inputs>();
         jumpingScript = GetComponent<JumpScript>();
+        actionsScript = GetComponent<Actions>();
     }
 
     private void Update()
     {
-        //WallSlide();
+        WallSlide();
         LedgeBump();
     }
 
@@ -40,43 +43,30 @@ public class WallSliding : MonoBehaviour
 
     #region Wall Slide
 
-
-
-    /*
     [Header("Wall Slide")]
     public bool isWallSliding;
     public float wallSlidingSpeed;
+
     public void WallSlide()
     {
-        if (inputsScript.isGrounded || inputsScript.playerRb.velocity.y > 0)
+        if(inputsScript.isGrounded || inputsScript.playerRb.velocity.y > 0)
         {
             isWallSliding = false;
-            //wall jump values set
-            jumpingScript.wallJumpingCounter -= Time.deltaTime;
             return;
         }
-        if (!jumpingScript.isWallJumping)
+
+        if (WallDetectionUpper() || WallDetectionMiddle() || WallDetectionLower()) 
         {
-            if (WallDetectionUpper() || WallDetectionMiddle() || WallDetectionLower())
-            {
-                isWallSliding = true;
-                inputsScript.playerRb.velocity = new Vector2(inputsScript.playerRb.velocity.x, -wallSlidingSpeed);
-
-                //wall jump values set
-                jumpingScript.isWallJumping = false;
-                jumpingScript.wallJumpingDirection = -transform.localScale.x;
-                jumpingScript.wallJumpingCounter = jumpingScript.wallJumpingTime;
-
-                CancelInvoke(nameof(jumpingScript.StopWallJumping));
-                CancelInvoke(nameof(jumpingScript.EnableWallMovement));
-            }
-            else
-            {
-                isWallSliding = false;
-            }
+            isWallSliding = true;
+            //StopCoroutine(actionsScript.Dash());
+            inputsScript.playerRb.velocity = new Vector2(inputsScript.playerRb.velocity.x, -wallSlidingSpeed);            
+        }   
+        else
+        {
+            isWallSliding = false;
         }
     }
-    /**/
+
     #endregion
 
     #region Ledge Bump

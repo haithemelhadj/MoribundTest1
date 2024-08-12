@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class JumpScript : MonoBehaviour
@@ -33,65 +30,73 @@ public class JumpScript : MonoBehaviour
     [Header("Jump")]
     public float jumpForce;
     public bool jumpConditions;
-    public bool jumpBool;
+    public bool jumpInputConfirmed;
     public bool jumpReset;
+    [Header("wall Jump")]
+    public float wallJumpDuration;
+    public float wallJumpPressTime;
+    public bool isWallJumping;
+    public Vector2 jumpDirection;
+    public Vector2 wallJumpDirection;
     public void JumpInput()
     {
-        /*
-        if (wallSlideScript.isWallSliding)
-        {
-            //jumpTimeCounter = jumpTime;
-            //isWallJumping = true;
-            isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
-            wallJumpingCounter = wallJumpingTime;
-
-            CancelInvoke(nameof(StopWallJumping));
-        }
-        else
-        {
-            wallJumpingCounter -= Time.deltaTime;
-        }
-        /**/
-        if(inputsScript.jumpInputDown)
+        if (inputsScript.jumpInputDown)
         {
             jumpPressTime = Time.time;
             willJump = true;
+            //put jump direction based on player state
+            if (wallSlideScript.isWallSliding)
+            {
+                wallJumpPressTime = Time.time;
+            }
         }
         // jump with get key down and up and resets jump press when player is grounded
-        if (willJump && (inputsScript.isGrounded || canJump) && jumpReset)  // || wallSlideScript.isWallSliding)
+        if (willJump && jumpReset && (inputsScript.isGrounded || canJump || wallSlideScript.isWallSliding))
         {
-             jumpBool = true;
+            jumpInputConfirmed = true;
             jumpReset = false;
         }
-        if(inputsScript.jumpInputUp)
+        if (inputsScript.jumpInputUp)
         {
-            jumpBool = false;
+            jumpInputConfirmed = false;
             willJump = false;
             jumpReset = true;
         }
 
-        //long press jump get key only
-        //if (inputsScript.jumpInput)//check jump press
-        if(jumpBool)
+
+        if (jumpInputConfirmed)
         {
-            //if normal jump
-            if (inputsScript.isGrounded || canJump) //check if the player can jump
+            //check if the player can jump
+            if (inputsScript.isGrounded || canJump|| wallSlideScript.isWallSliding)
             {
                 jumpTimeCounter = jumpTime;
                 isJumping = true;
             }
+
             if (isJumping)
             {
-                if (jumpTimeCounter > 0) //check if jump duration is not over
+                //check if walljumping duration is not over
+                if (isWallJumping || (Time.time - wallJumpPressTime < wallJumpDuration && wallSlideScript.isWallSliding)) 
                 {
-                    Jumping(new Vector2(inputsScript.playerRb.velocity.x, jumpForce));
+                    isWallJumping = true;
+                    jumpDirection = new Vector2(-transform.localScale.x * wallJumpDirection.x, wallJumpDirection.y);
+                }
+                else
+                {
+                    isWallJumping = false;
+                    jumpDirection = new Vector2(inputsScript.playerRb.velocity.x, jumpForce);
+                }
+                //check if jump duration is not over
+                if (jumpTimeCounter > 0)
+                {
+                    Jumping(jumpDirection);
                     jumpTimeCounter -= Time.deltaTime;
                 }
                 else //else stop jumping
                 {
+                    isWallJumping = false;
                     isJumping = false;
-                    jumpBool = false;
+                    jumpInputConfirmed = false;
                 }
             }
         }
@@ -104,6 +109,7 @@ public class JumpScript : MonoBehaviour
         inputsScript.playerRb.velocity = JumpDirection;
         canJump = false;
     }
+
     [Header("Variable Jump")]
     public float jumpTimeCounter;
     public float jumpTime;
@@ -113,6 +119,7 @@ public class JumpScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
+            isWallJumping = false;
         }
     }
 
@@ -123,12 +130,13 @@ public class JumpScript : MonoBehaviour
     public bool willJump;
     public void JumpBuffer()
     {
-        if (Time.time - jumpPressTime > jumpBufferTime) 
+        if (Time.time - jumpPressTime > jumpBufferTime)
         {
             willJump = false;
         }
 
     }
+
     //-----------cyote time
     [Header("Cyote Time")]
     public float LastGrounded;

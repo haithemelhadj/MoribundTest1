@@ -20,15 +20,16 @@ public class Movement : MonoBehaviour
     {
         if (ActionsScript.isDashing) return; //if dashing stop movement
         horizontalInput = inputsScript.horizontalInput;
-        
+
     }
     private void FixedUpdate()
     {
         //if starts walljumping can move for a little while
         //if (!jumpingScript.isNotMoving)
-        if(!ActionsScript.isDashing)
+        if (ActionsScript.isDashing || jumpingScript.isWallJumping)
+            return;
             Move();
-        
+
     }
 
     [Header("Variables")]
