@@ -24,9 +24,12 @@ public class JumpScript : MonoBehaviour
         CyoteTime();
         JumpBuffer();
         JumpInput();
-        FastDrop();
-        FallSpeedLimit();
+        FallControll();
     }
+
+
+
+    #region Jump 
     [Header("Jump")]
     public float jumpForce;
     public bool jumpConditions;
@@ -40,22 +43,28 @@ public class JumpScript : MonoBehaviour
     public Vector2 wallJumpDirection;
     public void JumpInput()
     {
+        bool isHuggingWall = false;
+        //if (isWallJumping) isWallJumping = Time.time - wallJumpPressTime < wallJumpDuration;
+        // get jump input and set values 
         if (inputsScript.jumpInputDown)
         {
             jumpPressTime = Time.time;
             willJump = true;
             //put jump direction based on player state
-            if (wallSlideScript.isWallSliding)
+            isHuggingWall = wallSlideScript.WallDetectionUpper() || wallSlideScript.WallDetectionMiddle() || wallSlideScript.WallDetectionLower();//wallSlideScript.isWallSliding
+            if (isHuggingWall)
             {
                 wallJumpPressTime = Time.time;
+                isWallJumping = true;
             }
         }
         // jump with get key down and up and resets jump press when player is grounded
-        if (willJump && jumpReset && (inputsScript.isGrounded || canJump || wallSlideScript.isWallSliding))
+        if (willJump && jumpReset && (inputsScript.isGrounded || canJump || isHuggingWall))
         {
             jumpInputConfirmed = true;
             jumpReset = false;
         }
+        // get jump key up to not jump
         if (inputsScript.jumpInputUp)
         {
             jumpInputConfirmed = false;
@@ -63,11 +72,11 @@ public class JumpScript : MonoBehaviour
             jumpReset = true;
         }
 
-
+        //if player is pressing jump 
         if (jumpInputConfirmed)
         {
             //check if the player can jump
-            if (inputsScript.isGrounded || canJump|| wallSlideScript.isWallSliding)
+            if (inputsScript.isGrounded || canJump || isHuggingWall)
             {
                 jumpTimeCounter = jumpTime;
                 isJumping = true;
@@ -77,10 +86,10 @@ public class JumpScript : MonoBehaviour
 
             if (isJumping)
             {
-                //check if walljumping duration is not over
-                if (isWallJumping || (Time.time - wallJumpPressTime < wallJumpDuration && wallSlideScript.isWallSliding)) 
+                //check if walljumping duration is not over and set jump direction
+                if (isWallJumping || (Time.time - wallJumpPressTime < wallJumpDuration && isHuggingWall))
                 {
-                    isWallJumping = true;
+                    isWallJumping = Time.time - wallJumpPressTime < wallJumpDuration;
                     jumpDirection = new Vector2(-transform.localScale.x * wallJumpDirection.x, wallJumpDirection.y);
                 }
                 else
@@ -98,29 +107,29 @@ public class JumpScript : MonoBehaviour
                 {
                     isWallJumping = false;
                     isJumping = false;
+                    jumpInputConfirmed = false;
                     //set jumping animation
                     inputsScript.playerAnimator.SetBool("isJumping", isJumping);
-                    jumpInputConfirmed = false;
-                }                
+                }
             }
         }
     }
-
-
-
     public void Jumping(Vector2 JumpDirection)
     {
         inputsScript.playerRb.velocity = JumpDirection;
         canJump = false;
     }
 
+    #endregion
+
+    #region Variable Jump
     [Header("Variable Jump")]
     public float jumpTimeCounter;
     public float jumpTime;
     public bool isJumping;
     public void VariableJump()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (inputsScript.jumpInputUp)
         {
             isJumping = false;
             //set jumping animation
@@ -128,7 +137,9 @@ public class JumpScript : MonoBehaviour
             isWallJumping = false;
         }
     }
+    #endregion
 
+    #region Jump Buffer
     //-----------Jump Buffer
     [Header("Jump Buffer")]
     public float jumpPressTime;
@@ -142,7 +153,9 @@ public class JumpScript : MonoBehaviour
         }
 
     }
+    #endregion
 
+    #region Cyote Time
     //-----------cyote time
     [Header("Cyote Time")]
     public float LastGrounded;
@@ -155,24 +168,25 @@ public class JumpScript : MonoBehaviour
             canJump = false;
         }
     }
+    #endregion
 
-    //limit fall speed 
+    #region Fall Controll
     [Header("Fall Controll")]
     public float maxFallSpeed;
-    public void FallSpeedLimit()
+    public float fallMultiplier;
+    public void FallControll()
     {
+        //make fall speed faster
+        if (inputsScript.playerRb.velocity.y < 0 && inputsScript.playerRb.velocity.y > -maxFallSpeed)
+        {
+            if (fallMultiplier == 0f) fallMultiplier = 1f;
+            inputsScript.playerRb.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
+        }
+        //limit fall speed 
         if (inputsScript.playerRb.velocity.y < -maxFallSpeed)
         {
             inputsScript.playerRb.velocity = new Vector2(inputsScript.playerRb.velocity.x, -maxFallSpeed);
         }
     }
-
-    //when player is falling make him fall faster
-    public void FastDrop()
-    {
-        if (inputsScript.playerRb.velocity.y < 2f)
-        {
-            inputsScript.playerRb.velocity += Vector2.up * Physics2D.gravity.y * 5 * Time.deltaTime;
-        }
-    }
+    #endregion
 }

@@ -20,6 +20,7 @@ public class Inputs : MonoBehaviour
     public bool jumpInputDown;
     public bool jumpInputUp;
     public bool dashInput;
+    public bool AttackInput;
 
     private void Awake()
     {
@@ -51,8 +52,9 @@ public class Inputs : MonoBehaviour
         GetVInputs();
         GetJumpInput();
         GetDashInput();
+        GetAttackInput();
     }
-
+    #region movement
 
     public void GetHInputs()
     {
@@ -72,17 +74,25 @@ public class Inputs : MonoBehaviour
         jumpInputDown = Input.GetKeyDown(jumpKey);
         jumpInputUp = Input.GetKeyUp(jumpKey);
     }
+    #endregion
 
+    #region Actions
     public KeyCode dashKey;
     public void GetDashInput()
     {
         dashInput = Input.GetKeyDown(dashKey);
     }
 
+    public KeyCode attackKey;
+    public void GetAttackInput()
+    {
+        AttackInput = Input.GetKeyDown(attackKey);
+    }
     public void GetInterractionInput()
     {
 
     }
+    #endregion
 
     #region General Checks
     [Header("Checks")]
