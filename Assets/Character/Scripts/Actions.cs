@@ -30,7 +30,7 @@ public class Actions : MonoBehaviour
     public bool isDashing;
     public float dashDirection;
 
-    public float drag;
+    //public float drag;
     public void DashInput()
     {
         if (inputsScript.dashInput && canDash)
@@ -61,11 +61,11 @@ public class Actions : MonoBehaviour
         inputsScript.playerRb.gravityScale = 0f;
         inputsScript.playerRb.constraints.Equals(RigidbodyConstraints2D.FreezePositionY);
         //set air friction 
-        float originalDrag = inputsScript.playerRb.drag;
-        inputsScript.playerRb.drag = drag;
+        //float originalDrag = inputsScript.playerRb.drag;
+        //inputsScript.playerRb.drag = drag;
         //stop jumping
         jumpScript.isJumping = false;
-        //set jumping animation
+        //set jumping animation to stop
         inputsScript.playerAnimator.SetBool("isJumping", jumpScript.isJumping);
         //null velocity
         inputsScript.playerRb.velocity = Vector2.zero;
@@ -82,7 +82,7 @@ public class Actions : MonoBehaviour
         inputsScript.playerRb.constraints.Equals(RigidbodyConstraints2D.FreezePosition);
         inputsScript.playerRb.drag = 0f;
         inputsScript.playerRb.gravityScale = originalGravity;
-        inputsScript.playerRb.drag = originalDrag;
+        //inputsScript.playerRb.drag = originalDrag;
         isDashing = false;
         inputsScript.playerAnimator.SetBool("Dashing", isDashing);
         yield return new WaitForSeconds(dashTime);

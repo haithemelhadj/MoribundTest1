@@ -33,9 +33,12 @@ public class Movement : MonoBehaviour
     {
         //move player
         if (inputsScript.horizontalInput != 0f)
-        inputsScript.playerRb.velocity = Vector3.Lerp(inputsScript.playerRb.velocity, new Vector3(inputsScript.horizontalInput * maxHSpeed, inputsScript.playerRb.velocity.y, 0f), acceleration);
+        {
+        inputsScript.playerRb.velocity = Vector3.MoveTowards(inputsScript.playerRb.velocity, new Vector3(inputsScript.horizontalInput * maxHSpeed, inputsScript.playerRb.velocity.y, 0f), acceleration);
+            //Debug.Log(inputsScript.playerRb.velocity);
+        }
         else //slow player to stop
-            inputsScript.playerRb.velocity = Vector3.Lerp(inputsScript.playerRb.velocity, new Vector3(0f, inputsScript.playerRb.velocity.y, 0f), deceleration);
+            inputsScript.playerRb.velocity = Vector3.MoveTowards(inputsScript.playerRb.velocity, new Vector3(0f, inputsScript.playerRb.velocity.y, 0f), deceleration );
 
         //flip character and keep it that way when no inputs        
         if(inputsScript.horizontalInput !=0)
