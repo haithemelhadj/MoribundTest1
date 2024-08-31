@@ -1,0 +1,1214 @@
+fileFormatVersion: 2
+guid: 114e22b8a897e2945a43af8930ae7374
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 368
+        width: 52
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffe1d304137ed740a5f783178472315
+      internalID: -381981185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 369
+        width: 43
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f1bf25520edc04d8c29e999dfea9e6
+      internalID: 509441697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 369
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a181d2042eb185a428f4307da485f4dd
+      internalID: 300050560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 369
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ef2b00b5a569d478d762f344c0d898
+      internalID: 435191535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 369
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17012d015e6b894fbf9d113f69212e4
+      internalID: 1631233623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 368
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873c8a2f364b061409de0c7a81153ab6
+      internalID: -1036233733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 369
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fe6b53278458f4badd5ee6929ac5db
+      internalID: 1666546100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 368
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13cb81663ab1644d87e56ca10528a14
+      internalID: 1520937981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 330
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43311bb4061a06468a8f4c12fa0e52c
+      internalID: -1262050278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 328
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aac00a811c99fd47b7d383549c6738a
+      internalID: -863320608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 330
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8c6715c057cc74a90f0d93443e52f2
+      internalID: -625526588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 330
+        width: 47
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfe8ba4c91abfc46aa49af67a05e585
+      internalID: 419516845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 329
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6113e7f4b9f270944a30b475158d29ad
+      internalID: 1656235120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 330
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a641f0e2e253814799eacc333e66730
+      internalID: -1640777929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 286
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910399730164d5a418147f1af4805667
+      internalID: -802772513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 284
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2356fb9103973404aaee3de0380cf52e
+      internalID: -258281605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f6b83ac1901614a87c0a1dbcef4fb4
+      internalID: 607404975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 287
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa57580e8762ac4aa8806577c151d2d
+      internalID: -1505403220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 286
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8588262e8ba2043bff21a2d9c983e9
+      internalID: 400647040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 288
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba780e8804e4bf438429fecdecfd2a9
+      internalID: -184825689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 288
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109328866caecc64fa124e1dd767bba4
+      internalID: -1236685283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 287
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f63f84bc31c0643ac118419028cf58
+      internalID: -315361984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 260
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7ad531d357442459897089f026ae63
+      internalID: -1670406236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 260
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b5e35b94f95614b9d45827ee663334
+      internalID: 1969972363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 260
+        width: 39
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a2d45f978a08e469c6c04ecfe1a690
+      internalID: 1285038164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 260
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31878db835f87b47a8be190daa87775
+      internalID: 1189478053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 228
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b08673bf68ebc4ba290a422516298c
+      internalID: 1151004733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 228
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89864d7b7393704cb1fece3eaa69a11
+      internalID: -638421643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 228
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1586b4f27d3003146b5f82021fa61eb9
+      internalID: 129256981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 228
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b425b7b1ee3aaa4b8d23c707959b818
+      internalID: -1911625233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 228
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525973be9eea1cc4cbcf1230bd7cd776
+      internalID: 1163563935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 228
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a8988e5cfc72c41ab365234213a8d7
+      internalID: 406608458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 228
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed579758b7d11674eb7c992420d24cdc
+      internalID: 1918464121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 228
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5a913db5d596c418db3b20a5828800
+      internalID: -1850519654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ac167b4b9be8a4ab37ccf0791bb329
+      internalID: -1533351303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 187
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd62ab79dbf12794d8ec47fd5a297cab
+      internalID: -1832752146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b204bd261bb2c1419daef1935405d38
+      internalID: 1238293183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_38
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 188
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f928e64b64f1c9489ddeaea8d471691
+      internalID: 998450307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_39
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbcb937750cf7441a6e8594c78419a7
+      internalID: -899547975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_40
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c563f077d139074ca105246aea8d1dd
+      internalID: -2059068623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 187
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31538a74ef0d12240a600163ad0c8ccd
+      internalID: 1927460491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 188
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22546af2d869f34d8100e741e823bdd
+      internalID: 250658494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_43
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 149
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc0fc899993727428b7948033cd9c0d
+      internalID: -2008115271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_44
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 70
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6512100a722ec44a14f33da40d57e0
+      internalID: -813058630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_45
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 70
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2266da798df54db45ad3baa9425643f4
+      internalID: -1392912009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_46
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 70
+        width: 47
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e671b44ccad9247a695c93d8862737
+      internalID: -1131093318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_47
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 70
+        width: 49
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccf44fb49086004fb311e6bb5ac5203
+      internalID: -299349079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 70
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e7b3768ac50f44395e46fbfc596044
+      internalID: 138299430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_0: -441617990
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_1: -381981185
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_10: -863320608
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_11: -625526588
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_12: 419516845
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_13: 1656235120
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_14: -1640777929
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_15: -802772513
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_16: -258281605
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_17: 607404975
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_18: -1505403220
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_19: 400647040
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_2: 509441697
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_20: -184825689
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_21: -1236685283
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_22: -315361984
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_23: -1670406236
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_24: 1969972363
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_25: 1285038164
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_26: 1189478053
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_27: 1151004733
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_28: -638421643
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_29: 129256981
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_3: 300050560
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_30: -1911625233
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_31: 1163563935
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_32: 406608458
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_33: 1918464121
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_34: -1850519654
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_35: -1533351303
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_36: -1832752146
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_37: 1238293183
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_38: 998450307
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_39: -899547975
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_4: 435191535
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_40: -2059068623
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_41: 1927460491
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_42: 250658494
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_43: -2008115271
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_44: -813058630
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_45: -1392912009
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_46: -1131093318
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_47: -299349079
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_48: 138299430
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_49: 307550165
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_5: 1631233623
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_50: 2082941881
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_51: -1957909059
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_52: 643828544
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_53: -785451015
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_54: -1759216837
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_55: -1789513910
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_56: 2022813754
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_57: 772762720
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_58: -178250884
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_59: -38384122
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_6: -1036233733
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_60: -552086251
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_61: -63917553
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_62: -1400740942
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_63: 1623102544
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_64: 1510264603
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_65: -2047816310
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_7: 1666546100
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_8: 1520937981
+      Villain_Game_Character_Sprite_Sheets-transformed_-_Copy-removebg-preview_9: -1262050278
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
