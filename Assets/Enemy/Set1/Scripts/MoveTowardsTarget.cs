@@ -6,6 +6,7 @@ public class MoveTowardsTarget : Action
 {
     public float chaseSpeed = 0;
     public SharedTransform target;
+    public SharedGameObject selfGameObject;
     public Rigidbody2D selfRb;
 
     public override void OnAwake()

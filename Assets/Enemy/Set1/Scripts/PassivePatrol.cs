@@ -1,3 +1,4 @@
+using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
@@ -7,13 +8,13 @@ public class PassivePatrol : Action
     public Rigidbody2D selfRb;
     public CapsuleCollider2D mobCollider;
 
-    public float mobHeight;
-    public float mobWidth;
+    public SharedFloat mobHeight;
+    public SharedFloat mobWidth;
 
-    public float patrolSpeed;
 
-    public float extraGroundCheckDistance;
-    public float scanRange = 1f;
+    public SharedFloat patrolSpeed;
+    public SharedFloat extraGroundCheckDistance;
+    public SharedFloat scanRange = 1f;
 
     public override void OnAwake()
     {
@@ -25,10 +26,10 @@ public class PassivePatrol : Action
     public override TaskStatus OnUpdate()
     {
 
-        RaycastHit2D wallCheck = Physics2D.Raycast(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth / 2 + scanRange) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.right * Mathf.Sign(transform.localScale.x), extraGroundCheckDistance, whatIsGround);
-        Debug.DrawRay(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth / 2 + scanRange) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.right * Mathf.Sign(transform.localScale.x) * extraGroundCheckDistance, color: Color.green);
-        RaycastHit2D ldgeCheck = Physics2D.Raycast(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth / 2 + scanRange) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.down, mobHeight / 2 + extraGroundCheckDistance, whatIsGround);
-        Debug.DrawRay(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth / 2 + scanRange) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.down * (mobHeight / 2 + extraGroundCheckDistance), color: Color.red);
+        RaycastHit2D wallCheck = Physics2D.Raycast(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth.Value / 2 + scanRange.Value) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.right * Mathf.Sign(transform.localScale.x), extraGroundCheckDistance.Value, whatIsGround);
+        Debug.DrawRay(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth.Value / 2 + scanRange.Value) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.right * Mathf.Sign(transform.localScale.x) * extraGroundCheckDistance.Value, color: Color.green);
+        RaycastHit2D ldgeCheck = Physics2D.Raycast(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth .Value/ 2 + scanRange.Value) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.down, mobHeight.Value / 2 + extraGroundCheckDistance.Value, whatIsGround);
+        Debug.DrawRay(transform.position + (Vector3)mobCollider.offset + new Vector3((mobWidth.Value / 2 + scanRange.Value) * Mathf.Sign(transform.localScale.x), 0, 0), Vector2.down * (mobHeight.Value / 2 + extraGroundCheckDistance.Value), color: Color.red);
 
 
         if (!ldgeCheck || wallCheck)
@@ -36,8 +37,8 @@ public class PassivePatrol : Action
 
             Flip();
         }
-
-        selfRb.velocity = Vector3.MoveTowards(selfRb.velocity, new Vector3(transform.localScale.x * patrolSpeed, selfRb.velocity.y, 0f), patrolSpeed * 0.3f);
+        Debug.Log(patrolSpeed + " used");
+        selfRb.velocity = Vector3.MoveTowards(selfRb.velocity, new Vector3(transform.localScale.x * patrolSpeed.Value, selfRb.velocity.y, 0f), patrolSpeed.Value * 0.3f);
         return TaskStatus.Running;
     }
 

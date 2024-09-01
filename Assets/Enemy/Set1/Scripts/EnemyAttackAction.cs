@@ -1,4 +1,5 @@
 
+using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
@@ -9,23 +10,32 @@ public class EnemyAttackAction : Action
     public GameObject atkObj;
     public Animator atkAnimator;
     //attack variables
-    public float atkRange;
-    public float atkTime;
-    [HideInInspector] public float atkDistance;
-    [HideInInspector] public Vector2 atkPosition;
-    [HideInInspector] public float atkRotation;
-
-    public CapsuleCollider2D mobCollider;
-    public float mobHeight;
-    public float mobWidth;
+    public SharedFloat atkRange;
+    public SharedFloat atkTime;
+    //public float atkDistance;
+    public Vector2 atkPosition;
+    public float atkRotation;
+    //public SharedCollider collider;
+    public SharedCapsulCollider2D mobCollider;
+    public SharedFloat mobHeight;
+    public SharedFloat mobWidth;
 
     public override void OnAwake()
     {
         mobCollider = GetComponent<CapsuleCollider2D>();
-        mobWidth = mobCollider.size.x;
-        mobHeight = mobCollider.size.y;
+
+    }
+    public override void OnStart()
+    {
+        #region
+        Debug.Log("attack2");
+        //base.OnStart();
+        mobCollider = GetComponent<CapsuleCollider2D>();
+        //collider.Value = mobCollider;
+        //mobWidth = mobCollider.Value.size.x;
+        //mobHeight = mobCollider.size.y;
         //attack horizontally
-        atkDistance = Mathf.Sign(transform.localScale.x) * (mobWidth / 2 + atkRange);
+        float atkDistance = Mathf.Sign(transform.localScale.x) * (mobWidth.Value / 2 + atkRange.Value);
         atkPosition = new Vector2(transform.position.x + atkDistance, transform.position.y);
         atkRotation = 0f;
         //set position and rotation
@@ -35,12 +45,34 @@ public class EnemyAttackAction : Action
         atkObj.SetActive(true);
         atkAnimator.SetBool("Attack", true);
         //MonoBehaviour.Invoke(nameof(StopAttacking), atkTime);
-        cd = atkTime;
+        cd = atkTime.Value;
+        #endregion
     }
 
     private float cd;
     public override TaskStatus OnUpdate()
     {
+        #region
+        Debug.Log("attack1");
+        //collider.Value = mobCollider;
+        //mobWidth = mobCollider.Value.size.x;
+        //mobHeight = mobCollider.size.y;
+        //attack horizontally
+        float atkDistance = Mathf.Sign(transform.localScale.x) * (mobWidth.Value / 2 + atkRange.Value);
+        atkPosition = new Vector2(transform.position.x + atkDistance, transform.position.y);
+        atkRotation = 0f;
+        //set position and rotation
+        atkObj.transform.position = atkPosition;
+        atkObj.transform.eulerAngles = new Vector3(0f, 0f, atkRotation);
+        //attack and disable attack after attackTime
+        atkObj.SetActive(true);
+        atkAnimator.SetBool("Attack", true);
+        //MonoBehaviour.Invoke(nameof(StopAttacking), atkTime);
+        cd = atkTime.Value;
+        #endregion
+
+
+        #region
         cd -= Time.deltaTime;
         if (cd < 0f)
         {
@@ -50,8 +82,9 @@ public class EnemyAttackAction : Action
             return TaskStatus.Success;
         }
         return TaskStatus.Running;
+        #endregion
     }
-    
+
 
     public void StopAttacking()
     {
@@ -62,4 +95,6 @@ public class EnemyAttackAction : Action
     #region Attack
 
     #endregion
+
+
 }

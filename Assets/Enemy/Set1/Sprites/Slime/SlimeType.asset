@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd2b175d588a4e4ebb70e1a27e66a4c, type: 3}
+  m_Name: SlimeType
+  m_EditorClassIdentifier: 
+  mobRb: {fileID: 0}
+  mobAnimator: {fileID: 0}
+  mobCollider: {fileID: 0}
+  mobHeight: 0
+  mobWidth: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  movementType: 0
+  tickSpeed: 0.2
+  health: 10
+  defence: 2
+  dodgeChance: 0
+  patrolType: 1
+  patrolSpeed: 3
+  extraGroundCheckDistance: 0.05
+  scanRange: 1
+  detectionType: 0
+  detectionDistance: 3
+  chaseSpeed: 4
+  attackType: 0
+  attackSpeed: 0.5
+  attackRange: 1
+  attackTime: 0
+  attackDmg: 0
+  attacks: 
+  agroRange: 0
+  Aggressiveness: 0
+  Fear: 0
+  Intelligence: 0
